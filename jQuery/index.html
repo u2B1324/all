@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #my-scrollbar {
+            width: 500px;
+            height: 500px;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <scrollbar>
+        <section data-scrollbar id="my-scrollbar">
+            <img src="your_diary.jpg">
+        </section>
+    </scrollbar>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.1/smooth-scrollbar.js"
+        integrity="sha512-yn9N2uBs4OocMUaJ9wZK6ELv+qXIULoRa7IvOsGz2wqWQRt8mNqU1L2I9Fau24PPxEKlGxuEDkRKvsanwAWUYw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        Scrollbar.initAll();
+    </script>
+</body>
+
+</html>

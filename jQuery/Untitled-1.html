@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="bt">버튼</button>
+  <style>
+    .red {
+      background-color: red;
+    }
+  </style>
+
+  <!-- 클래스 addClass, removeClass, hasClass -->
+  <script>
+    // 버튼 요소를 찾는데.. id 가 있더라.
+    let bt = document.getElementById("bt");
+    // 클래스 변경
+    function fn(event) {
+      // 클릭이 된 버튼을 찾는다.
+      let element = event.target;
+      console.log(element);
+      // 클래스 추가
+      // element.classList.add("red");
+      // $(element).addClass("red");
+      // 클래스 삭제
+      // element.classList.remove("red");
+      // $(element).removeClass("red");
+      // 클래스 적용 여부 파악
+      if (element.classList.contains("red")) {
+        element.classList.remove("red");
+      } else {
+        element.classList.add("red");
+      }
+    }
+    // 표준 이벤트로 연결
+    bt.addEventListener("click", fn);
+  </script>
+</body>
+
+</html>
